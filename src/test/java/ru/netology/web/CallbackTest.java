@@ -50,12 +50,5 @@ class CallbackTest {
         String text = driver.findElement(By.className("alert-success")).getText();
         assertEquals("Ваша заявка успешно отправлена!", text.trim());
     }
-    public TestBrowser() {
-        var options = new EdgeOptions();
-        driver = new EdgeDriver(options);
-        chromeDevTools = driver.getDevTools();
-        chromeDevTools.createSession();
-        chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-    }
 }
 
